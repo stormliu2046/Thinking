@@ -8,21 +8,26 @@ import java.util.List;
 public class LegalBrackets {
 
     public List<String> generateParenthesis(int n) {
-        _generate( 0, 2 * n, "");
+        _generate(0, 0,  n, "");
         return null;
     }
 
-    private void _generate(int level, int max, String s) {
+    private void _generate(int left, int right, int max, String s) {
         // terminator
-        if (level >= max) {
+        if (left == max && left == right) {
             System.out.println(s);
             return;
         }
         // process
         String s1 = s + "(";
         String s2 = s + ")";
-        _generate(level + 1, max, s1);
-        _generate(level + 1, max, s2);
+        if (left < max) {
+            _generate(left + 1, right, max, s1);
+        }
+        if (left > right) {
+            _generate(left, right + 1, max, s2);
+        }
+
         // drill down
         // reverse states
     }

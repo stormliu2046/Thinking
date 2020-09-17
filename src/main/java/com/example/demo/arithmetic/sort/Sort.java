@@ -1,5 +1,8 @@
 package com.example.demo.arithmetic.sort;
 
+import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
@@ -7,9 +10,10 @@ import java.util.Random;
 /**
  * @author robert
  */
+@Slf4j
 public class Sort {
 
-    public Sort(){}
+    public static final Random RANDOM = new Random();
 
     /**
      * 冒泡排序
@@ -32,9 +36,9 @@ public class Sort {
 
         public static void main(String[] args) {
             int[] nums = randomArrays();
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
             bubbleSort(nums);
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
             bubbleSort(new int[]{});
         }
     }
@@ -62,9 +66,9 @@ public class Sort {
 
         public static void main(String[] args) {
             int[] nums = randomArrays();
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
             selectionSort(nums);
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
         }
     }
 
@@ -88,18 +92,22 @@ public class Sort {
         public static void main(String[] args) {
             Sort.InsertionSort insertionSort = new Sort.InsertionSort();
             int[] nums = randomArrays();
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
             insertionSort.insertionSort(nums);
-            System.out.println(Arrays.toString(nums));
+            log.info(Arrays.toString(nums));
         }
+
+    }
+
+
+    static class MergeSort {
 
     }
 
     public static int[] randomArrays() {
         int[] nums = new int[10];
-        Random random = new Random();
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(10);
+            nums[i] = RANDOM.nextInt(10);
         }
         return nums;
     }
