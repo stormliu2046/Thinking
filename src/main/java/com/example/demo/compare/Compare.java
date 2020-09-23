@@ -14,7 +14,7 @@ public class Compare {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    class Person {
+    static class Person {
         private int id;
         private String name;
     }
