@@ -20,5 +20,6 @@ public class MapTest {
         Arrays.asList(1,2);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("");
+
     }
 }

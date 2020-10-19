@@ -3,7 +3,7 @@ package com.example.demo.thread;
 /**
  * @author robert
  */
-public class TestThread implements Runnable {
+public class ThreadTest implements Runnable {
 
     int b = 100;
 
@@ -23,7 +23,7 @@ public class TestThread implements Runnable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        TestThread tt = new TestThread();
+        ThreadTest tt = new ThreadTest();
         Thread t = new Thread(tt);
         t.start();
 

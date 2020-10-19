@@ -29,7 +29,7 @@ public class Compare {
         );
         //获取中文环境
         Comparator comparator = Collator.getInstance(Locale.CHINA);
-        //进行排序
+        //进行排序，按id从小到大排序，id相同则按名称排序
         Collections.sort(personList, (p1, p2) -> {
             if (p1.getId() > p2.getId()) {
                 return 1;
