@@ -1,9 +1,7 @@
 package com.example.demo.basic;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -20,6 +18,6 @@ public class MapTest {
         Arrays.asList(1,2);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("");
-
+        List list = new ArrayList();
     }
 }
