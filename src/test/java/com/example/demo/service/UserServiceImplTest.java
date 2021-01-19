@@ -5,8 +5,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * @author robert
  */
@@ -19,5 +17,10 @@ class UserServiceImplTest {
     @Test
     void batchInsert() {
         userService.batchInsert();
+    }
+
+    @Test
+    void insert() {
+        userService.insert();
     }
 }

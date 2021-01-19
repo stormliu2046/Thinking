@@ -7,4 +7,5 @@ public interface UserService {
 
     void batchInsert();
 
+    void insert();
 }
