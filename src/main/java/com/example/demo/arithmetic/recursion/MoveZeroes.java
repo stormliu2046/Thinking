@@ -1,7 +1,5 @@
 package com.example.demo.arithmetic.recursion;
 
-import com.example.demo.arithmetic.sort.Sort;
-
 import java.util.Arrays;
 
 /**
