@@ -30,6 +30,8 @@ public class LRUExtendLinkedList<K, V> extends LinkedHashMap<K, V> {
         log.info(lru.toString());
         lru.put(2, 20);
         log.info(lru.toString());
+        lru.get(1);
+        log.info(lru.toString());
         lru.put(10, 10);
         log.info(lru.toString());
     }

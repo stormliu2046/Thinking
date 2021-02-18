@@ -1,5 +1,7 @@
 package com.example.demo.arithmetic.sort.mergesort;
 
+import java.util.Arrays;
+
 /**
  * @author robert
  */
@@ -22,5 +24,7 @@ public class ShellSort {
                 a[j + add] = data;
             }
         }
+
+        System.out.println(Arrays.toString(a));
     }
 }
