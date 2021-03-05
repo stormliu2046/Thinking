@@ -2,6 +2,9 @@ package com.example.demo.test;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author robert
  */
@@ -72,9 +75,46 @@ public class Test {
 //            System.out.println(provinceName);
 //        }
 
-        int a = 16;
-        log.info((a >>> 1) + "");
-        Integer b = new Integer(16);
-        log.info(b.equals(a) + "");
+//        int a = 16;
+//        log.info((a >>> 1) + "");
+//        Integer b = new Integer(16);
+//        log.info(b.equals(a) + "");
+
+//        int a = -1;
+//        log.info((a >>> 1) + "");
+//        log.info((a >> 1) + "");
+//        log.info(Integer.MAX_VALUE + "");
+
+//        int a = 129;
+//        Integer b = 129;
+//        Integer c = new Integer(129);
+//        System.out.println(a == b); //true
+//        System.out.println(a == c); //true
+//        System.out.println(b == c); //false
+
+//        String str1 = new String("1");
+//        str1.intern();
+//        String str2 = "1";
+//        System.out.println(str1 == str2);   // false
+//
+//        String str3 = new String("2") + new String("2");
+//        str3.intern();
+//        String str4 = "22";
+//        System.out.println(str3 == str4);   // true
+//
+//        String str5 = new String("2") + new String("2");
+//        String str6 = "22";
+//        str5.intern();
+//        System.out.println(str5 == str6);   // false
+//        System.out.println(1^3);
+
+        ArrayList<Object> arrayList = new ArrayList<>();    // 容量默认10，1/2扩容
+        LinkedList<Object> linkedList = new LinkedList<>();
+        Hashtable<Object, Object> hashtable = new Hashtable<>();    // 容量默认11，加载因子0.75f
+        Properties properties = new Properties();   // 继承Hashtable
+        Vector<Object> vector = new Vector<>(); // 默认10，指定扩容容量按指定扩容，否则默认2倍扩容
+        new Stack<>(); // 继承Vector
+        HashSet<Object> set = new HashSet<>();
+        new ConcurrentHashMap<>();
     }
 }

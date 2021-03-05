@@ -34,7 +34,22 @@ public class BasicTest {
 }
 
 class A {
-    public A(String str) {
+    public A(String str) {}
+}
 
+class Test {
+    static {
+        int x = 5;
+    }
+
+    static int x, y;
+
+    public static void main(String[] args) {
+        x--; //x=-1
+        myMethod();
+        System.out.println(x+y + ++x); //1+0+2=3
+    }
+    public static void myMethod() {
+        y = x++ + ++x; //y=-1+1=0, x=1
     }
 }

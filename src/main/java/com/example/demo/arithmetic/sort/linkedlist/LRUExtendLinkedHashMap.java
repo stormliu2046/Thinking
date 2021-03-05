@@ -9,20 +9,20 @@ import java.util.Map;
  * @author robert
  */
 @Slf4j
-public class LRUExtendLinkedList<K, V> extends LinkedHashMap<K, V> {
+public class LRUExtendLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
     private int cacheSize;
 
-    public LRUExtendLinkedList(int cacheSize) {
+    public LRUExtendLinkedHashMap(int cacheSize) {
         this.cacheSize = cacheSize;
     }
 
     @Override
     protected boolean removeEldestEntry(Map.Entry eldest) {
-        return size() > LRUExtendLinkedList.this.cacheSize;
+        return size() > LRUExtendLinkedHashMap.this.cacheSize;
     }
 
     public static void main(String[] args) {
-        LRUExtendLinkedList<Integer, Object> lru = new LRUExtendLinkedList<>(4);
+        LRUExtendLinkedHashMap<Integer, Object> lru = new LRUExtendLinkedHashMap<>(4);
         lru.put(1, 1);
         lru.put(2, 2);
         lru.put(3, 3);
