@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author robert
@@ -109,12 +110,26 @@ public class Test {
 //        System.out.println(1^3);
 
         ArrayList<Object> arrayList = new ArrayList<>();    // 容量默认10，1/2扩容
+        arrayList.add(1);
+        arrayList.get(1);
         LinkedList<Object> linkedList = new LinkedList<>();
+        linkedList.add(1);
+        linkedList.get(1);
         Hashtable<Object, Object> hashtable = new Hashtable<>();    // 容量默认11，加载因子0.75f
+        hashtable.put(1, 1);
         Properties properties = new Properties();   // 继承Hashtable
+        properties.setProperty("1","1");
         Vector<Object> vector = new Vector<>(); // 默认10，指定扩容容量按指定扩容，否则默认2倍扩容
         new Stack<>(); // 继承Vector
         HashSet<Object> set = new HashSet<>();
-        new ConcurrentHashMap<>();
+        set.add(1);
+        Map<Object, Object> map = new HashMap<>();
+        map.put(1, 1);
+        ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
+        concurrentHashMap.put(1, 1);
+
+        ReentrantLock lock = new ReentrantLock();
+        lock.lock();
+        lock.unlock();
     }
 }

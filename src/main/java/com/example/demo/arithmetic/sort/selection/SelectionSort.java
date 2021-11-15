@@ -1,4 +1,4 @@
-package com.example.demo.arithmetic.sort;
+package com.example.demo.arithmetic.sort.selection;
 
 import lombok.extern.slf4j.Slf4j;
 
