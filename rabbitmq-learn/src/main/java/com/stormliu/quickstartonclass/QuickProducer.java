@@ -3,7 +3,7 @@ package com.stormliu.quickstartonclass;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import com.stormliu.ConnectionFactoryHelper;
+import com.stormliu.utils.RabbitConnectionHelper;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeoutException;
 public class QuickProducer {
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        ConnectionFactory connectionFactory = ConnectionFactoryHelper.getConnFactory();
+        ConnectionFactory connectionFactory = RabbitConnectionHelper.getConnFactory();
 
         Connection connection = connectionFactory.newConnection();
 

@@ -1,12 +1,13 @@
-package com.stormliu;
+package com.stormliu.utils;
 
+import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 /**
  * @author robert
  * @date 2021/11/5
  */
-public class ConnectionFactoryHelper {
+public class RabbitConnectionHelper {
 
     public static ConnectionFactory getConnFactory() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
@@ -17,5 +18,13 @@ public class ConnectionFactoryHelper {
         connectionFactory.setPassword("admin");
         connectionFactory.setConnectionTimeout(100000);
         return connectionFactory;
+    }
+
+    public static Connection getConnection() {
+        try {
+            return getConnFactory().newConnection();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

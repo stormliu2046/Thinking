@@ -3,7 +3,7 @@ package com.stormliu.directexchange;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import com.stormliu.ConnectionFactoryHelper;
+import com.stormliu.utils.RabbitConnectionHelper;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -16,7 +16,7 @@ public class DirectExchangeProducer {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         //创建连接工厂
-        ConnectionFactory connectionFactory = ConnectionFactoryHelper.getConnFactory();
+        ConnectionFactory connectionFactory = RabbitConnectionHelper.getConnFactory();
 
         //创建连接
         Connection connection = connectionFactory.newConnection();

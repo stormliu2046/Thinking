@@ -4,7 +4,7 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
-import com.stormliu.ConnectionFactoryHelper;
+import com.stormliu.utils.RabbitConnectionHelper;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -17,7 +17,7 @@ import java.util.concurrent.TimeoutException;
 public class DirectExchangeConsumer1 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        ConnectionFactory connFactory = ConnectionFactoryHelper.getConnFactory();
+        ConnectionFactory connFactory = RabbitConnectionHelper.getConnFactory();
 
         Connection connection = connFactory.newConnection();
 
