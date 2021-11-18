@@ -31,9 +31,9 @@ public class DirectExchangeProducer {
         String routingKey = "tuling.directchange.key";
 
         //消息体内容
-        for (int i=0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             String messageBody = "hello tuling--" + i;
-            channel.basicPublish(exchangeName,routingKey,null,messageBody.getBytes());
+            channel.basicPublish(exchangeName, routingKey, null, messageBody.getBytes());
             System.out.println(" [x] Sent '" + messageBody + "'");
         }
 
