@@ -1,11 +1,7 @@
 package com.rabbitmq.rabbitmqspringboot;
 
-import cn.hutool.json.JSONUtil;
-import com.rabbitmq.client.ReturnCallback;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.springframework.amqp.core.ReturnedMessage;
-import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
