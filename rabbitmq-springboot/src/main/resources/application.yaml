@@ -1,0 +1,21 @@
+server:
+  port: 8082
+spring:
+  rabbitmq:
+    host: 101.35.177.122
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: admin
+    connection-timeout: 10000
+#    publisher-confirm-type: correlated
+#    publisher-returns: true
+    listener:
+      direct:
+        acknowledge-mode: manual
+        prefetch: 2
+        consumers-per-queue: 1
+      simple:
+        #自动签收auto  手动 manual
+        acknowledge-mode: manual
+        prefetch: 2

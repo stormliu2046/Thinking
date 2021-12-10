@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    database: 0
+    timeout: 3000
+    # sentinel:
+      # master: mymaster
+      # nodes: 192.168.100.116:26379, 192.168.100.116:26380, 192.168.100.116:26381
+    lettuce:
+      pool:
+        min-idle: 10
+        max-active: 100
+        max-wait: 1000
+        max-idle: 50
+    password: root
+    cluster:
+      nodes: 192.168.100.116:8001, 192.168.100.116:8002, 192.168.100.116:8003, 192.168.100.116:8004, 192.168.100.116:8005, 192.168.100.116:8006

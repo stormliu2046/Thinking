@@ -1,0 +1,8 @@
+spring:
+  rabbitmq:
+    host: 101.35.177.122
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: admin
+    connection-timeout: 10000
