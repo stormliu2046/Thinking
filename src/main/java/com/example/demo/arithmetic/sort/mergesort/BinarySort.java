@@ -5,9 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 /**
+ * 二分排序
+ *
  * @Author robert
  * @Date 2021/2/18
- * 二分排序
  */
 @Slf4j
 public class BinarySort {

@@ -29,7 +29,6 @@ public class IndexController {
             } catch (InterruptedException e) {
                 log.error("错误：", e);
             }
-
         }
     }
 

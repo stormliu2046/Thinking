@@ -3,6 +3,8 @@ package com.example.demo.arithmetic.sort.mergesort;
 import java.util.Arrays;
 
 /**
+ * 希尔排序
+ *
  * @author robert
  */
 public class ShellSort {
